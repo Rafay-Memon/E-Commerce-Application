@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	metadata-complete="true" id="WebApp_ID" version="6.0">
+
+	<display-name>E-Commerce-Application</display-name>
+
+	<!-- Define resource reference for the DataSource -->
+	<resource-ref>
+		<description>Database Connection</description>
+		<res-ref-name>jdbc/MyDB</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<welcome-file-list>
+		<welcome-file>welcome.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+
+	
+	<!-- Servlet for Forgot Password -->
+    <servlet>
+        <servlet-name>ForgotPasswordController</servlet-name>
+        <servlet-class>com.estore.controller.ForgotPasswordController</servlet-class>
+    </servlet>
+	
+	  <!-- Servlet Mapping for Forgot Password -->
+	 <servlet-mapping>
+        <servlet-name>ForgotPasswordController</servlet-name>
+        <url-pattern>/ForgotPasswordController</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for Reset Password -->
+    <servlet>
+        <servlet-name>ResetPasswordController</servlet-name>
+        <servlet-class>com.estore.controller.ResetPasswordController</servlet-class>
+    </servlet>
+    
+    <!-- Servlet Mapping for Reset Password -->
+    <servlet-mapping>
+        <servlet-name>ResetPasswordController</servlet-name>
+        <url-pattern>/ResetPasswordController</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- Login Servlet -->
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>com.estore.controller.LoginController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+
+    <!-- Signup Servlet -->
+    <servlet>
+        <servlet-name>SignupController</servlet-name>
+        <servlet-class>com.estore.controller.SignupController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignupController</servlet-name>
+        <url-pattern>/SignupController</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Product Servlet -->
+    <servlet>
+        <servlet-name>ProductController</servlet-name>
+        <servlet-class>com.estore.controller.ProductController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductController</servlet-name>
+        <url-pattern>/ProductController</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    <!-- CartController Servlet -->
+    <servlet>
+        <servlet-name>CartController</servlet-name>
+        <servlet-class>com.estore.controller.CartController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartController</servlet-name>
+        <url-pattern>/CartController</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- CheckoutController Servlet -->
+    <servlet>
+        <servlet-name>CheckoutController</servlet-name>
+        <servlet-class>com.estore.controller.CheckoutController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckoutController</servlet-name>
+        <url-pattern>/CheckoutController</url-pattern>
+    </servlet-mapping>
+    
+   <!-- OrderController Servlet -->
+   
+   <servlet>
+        <servlet-name>OrderController</servlet-name>
+        <servlet-class>com.estore.controller.OrderController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/OrderController</url-pattern>
+    </servlet-mapping>
+    
+    <!-- ContactController Servlet -->
+   
+   <servlet>
+        <servlet-name>ContactController</servlet-name>
+        <servlet-class>com.estore.controller.ContactController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactController</servlet-name>
+        <url-pattern>/ContactController</url-pattern>
+    </servlet-mapping>
+   
+</web-app>
